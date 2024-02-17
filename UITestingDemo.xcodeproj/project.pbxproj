@@ -13,7 +13,8 @@
 		2A93BB972B7F446500A18412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A93BB962B7F446500A18412 /* Preview Assets.xcassets */; };
 		2A93BBA12B7F446500A18412 /* UITestingDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBA02B7F446500A18412 /* UITestingDemoTests.swift */; };
 		2A93BBAB2B7F446500A18412 /* UITestingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBAA2B7F446500A18412 /* UITestingDemoUITests.swift */; };
-		2A93BBAD2B7F446500A18412 /* UITestingDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBAC2B7F446500A18412 /* UITestingDemoUITestsLaunchTests.swift */; };
+		2A93BBBC2B7FE41100A18412 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBB2B7FE41100A18412 /* User.swift */; };
+		2A93BBBE2B7FE51200A18412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBD2B7FE51200A18412 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,9 @@
 		2A93BBA02B7F446500A18412 /* UITestingDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingDemoTests.swift; sourceTree = "<group>"; };
 		2A93BBA62B7F446500A18412 /* UITestingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A93BBAA2B7F446500A18412 /* UITestingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingDemoUITests.swift; sourceTree = "<group>"; };
-		2A93BBAC2B7F446500A18412 /* UITestingDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A93BBB92B7F472400A18412 /* UITestingDemo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestingDemo.xctestplan; sourceTree = "<group>"; };
+		2A93BBBB2B7FE41100A18412 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2A93BBBD2B7FE51200A18412 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		2A93BB832B7F446300A18412 = {
 			isa = PBXGroup;
 			children = (
+				2A93BBB92B7F472400A18412 /* UITestingDemo.xctestplan */,
 				2A93BB8E2B7F446300A18412 /* UITestingDemo */,
 				2A93BB9F2B7F446500A18412 /* UITestingDemoTests */,
 				2A93BBA92B7F446500A18412 /* UITestingDemoUITests */,
@@ -98,6 +102,8 @@
 				2A93BB912B7F446300A18412 /* ContentView.swift */,
 				2A93BB932B7F446500A18412 /* Assets.xcassets */,
 				2A93BB952B7F446500A18412 /* Preview Content */,
+				2A93BBBB2B7FE41100A18412 /* User.swift */,
+				2A93BBBD2B7FE51200A18412 /* LoginView.swift */,
 			);
 			path = UITestingDemo;
 			sourceTree = "<group>";
@@ -122,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				2A93BBAA2B7F446500A18412 /* UITestingDemoUITests.swift */,
-				2A93BBAC2B7F446500A18412 /* UITestingDemoUITestsLaunchTests.swift */,
 			);
 			path = UITestingDemoUITests;
 			sourceTree = "<group>";
@@ -259,6 +264,8 @@
 			files = (
 				2A93BB922B7F446300A18412 /* ContentView.swift in Sources */,
 				2A93BB902B7F446300A18412 /* UITestingDemoApp.swift in Sources */,
+				2A93BBBE2B7FE51200A18412 /* LoginView.swift in Sources */,
+				2A93BBBC2B7FE41100A18412 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A93BBAD2B7F446500A18412 /* UITestingDemoUITestsLaunchTests.swift in Sources */,
 				2A93BBAB2B7F446500A18412 /* UITestingDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
