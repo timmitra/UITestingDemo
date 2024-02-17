@@ -8,17 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  @State private var showLogin = false
+  @EnvironmentObject private var user: User
+  
+  var body: some View {
+    VStack {
+      Text(!user.isLoggedIn ? "Welcome!" : "Welcome \(user.username)!")
+        .font(.title)
+      
+      Spacer().frame(height: 20)
+      
+      Button(action: {
+        if !user.isLoggedIn {
+        showLogin = true
+        } else {
+          user.logout()
         }
-        .padding()
+      }, label: {
+        Text("Login")
+      }).accessibilityIdentifier("loginButton")
     }
+    .sheet(isPresented: $showLogin) {
+            LoginView()
+        }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
