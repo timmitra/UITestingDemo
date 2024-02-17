@@ -15,6 +15,9 @@
 		2A93BBAB2B7F446500A18412 /* UITestingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBAA2B7F446500A18412 /* UITestingDemoUITests.swift */; };
 		2A93BBBC2B7FE41100A18412 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBB2B7FE41100A18412 /* User.swift */; };
 		2A93BBBE2B7FE51200A18412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBD2B7FE51200A18412 /* LoginView.swift */; };
+		2A93BBBF2B811C1C00A18412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BB912B7F446300A18412 /* ContentView.swift */; };
+		2A93BBC02B811C9B00A18412 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBB2B7FE41100A18412 /* User.swift */; };
+		2A93BBC12B811EEF00A18412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93BBBD2B7FE51200A18412 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A93BBBF2B811C1C00A18412 /* ContentView.swift in Sources */,
 				2A93BBAB2B7F446500A18412 /* UITestingDemoUITests.swift in Sources */,
+				2A93BBC12B811EEF00A18412 /* LoginView.swift in Sources */,
+				2A93BBC02B811C9B00A18412 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

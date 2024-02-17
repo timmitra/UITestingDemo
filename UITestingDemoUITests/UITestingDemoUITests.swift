@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import UITestingDemo
 
 final class UITestingDemoUITests: XCTestCase {
   
@@ -119,5 +120,28 @@ final class UITestingDemoUITests: XCTestCase {
    
       app.alerts.element.buttons["OK"].tap()
       XCTAssertFalse(app.alerts.element.exists)
+  }
+ 
+  // MARK: - Login Tests
+  func login() throws {
+      app.buttons["Login"].tap()
+   
+      app.textFields.element.tap()
+      app.textFields.element.typeText("test")
+   
+      app.secureTextFields.element.tap()
+      app.secureTextFields.element.typeText("pass")
+      app.keyboards.buttons["Return"].tap()
+   
+      app.buttons["loginNow"].tap()
+  }
+  
+  func testWelcomeAfterLogin() throws {
+    XCTAssert(app.staticTexts["Welcome!"].exists)
+    
+    try login()
+    
+    XCTAssert(app.staticTexts["Welcome test!"].exists)
+    XCTAssertFalse(app.staticTexts["Welcome!   "].exists)
   }
 }
