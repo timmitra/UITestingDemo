@@ -25,7 +25,7 @@ struct ContentView: View {
           user.logout()
         }
       }, label: {
-        Text("Login")
+        Text(!user.isLoggedIn ? "Login" : "Logout")
       }).accessibilityIdentifier("loginButton")
     }
     .sheet(isPresented: $showLogin) {
