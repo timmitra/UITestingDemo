@@ -163,6 +163,39 @@ final class UITestingDemoUITests: XCTestCase {
     
     XCTAssert(app.staticTexts["Welcome!"].exists)
     XCTAssertEqual(app.buttons["loginButton"].label, "Login")
-
+  }
+  
+  // MARK: Prefs tests
+  func testColorTheme() throws {
+    try login()
+    
+    let colorTheme = app.segmentedControls["colorTheme"]
+    XCTAssert(colorTheme.exists)
+    XCTAssert(colorTheme.buttons["Light"].isSelected)
+    
+    colorTheme.buttons["Dark"].tap()
+    XCTAssert(colorTheme.buttons["Dark"].isSelected)
+  }
+  
+  func testTextSize() throws {
+    try login()
+    
+    let textSize = app.sliders["slider"]
+    XCTAssert(textSize.exists)
+    
+    textSize.adjust(toNormalizedSliderPosition: 0.75)
+    XCTAssertGreaterThanOrEqual(textSize.value as! String, "0.7")
+  }
+  
+  func testFontPicker() throws {
+    try login()
+    
+    let wheel = app.pickerWheels.element
+    // let wheel = app.pickers["fontPicker"].pickerWheels.element // also a valid way
+    XCTAssert(wheel.exists)
+    XCTAssertEqual(wheel.value as! String, "Arial")
+    
+    wheel.adjust(toPickerWheelValue: "Futura")
+    XCTAssertEqual(wheel.value as! String, "Futura")
   }
 }
