@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct UITestingDemoApp: App {
+  var user = User() // make User available globally
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(user) // pass user to views environment
         }
     }
 }
